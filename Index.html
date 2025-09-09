@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Vagas de Emprego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Vagas de Emprego</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="cadastrar.html">Cadastrar Vaga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="actions">
+            <h2>Gerenciar Vagas</h2>
+            <div class="btn-group">
+                <a href="cadastrar.html" class="btn btn-primary">Cadastrar Nova Vaga</a>
+            </div>
+        </section>
+
+        <section class="vagas-lista">
+            <h2>Vagas Disponíveis</h2>
+            <div id="vagas-container" class="vagas-grid">
+                <!-- As vagas serão carregadas via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Confirmação de Exclusão -->
+    <div id="modal-excluir" class="modal">
+        <div class="modal-content">
+            <h3>Confirmar Exclusão</h3>
+            <p>Tem certeza que deseja excluir esta vaga?</p>
+            <div class="modal-actions">
+                <button id="btn-cancelar-exclusao" class="btn btn-secondary">Cancelar</button>
+                <button id="btn-confirmar-exclusao" class="btn btn-danger">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

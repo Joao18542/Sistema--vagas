@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Vaga - Sistema de Vagas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Editar Vaga</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="cadastrar.html">Cadastrar Vaga</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+            <h2>Editar Vaga de Emprego</h2>
+            <div id="alert-edicao" class="alert"></div>
+            
+            <form id="form-editar-vaga">
+                <div class="form-group">
+                    <label for="idvaga">ID da Vaga:</label>
+                    <input type="text" id="idvaga" name="idvaga" readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label for="descricao">Descrição do Cargo:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="empresa">Empresa:</label>
+                    <input type="text" id="empresa" name="empresa" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="modalidade">Modalidade:</label>
+                    <select id="modalidade" name="modalidade" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="Efetivo">Efetivo</option>
+                        <option value="PJ">Pessoa Jurídica (PJ)</option>
+                        <option value="Estágio">Estágio</option>
+                        <option value="Temporário">Temporário</option>
+                        <option value="Freelancer">Freelancer</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requisitosObrigatorios">Requisitos Obrigatórios:</label>
+                    <textarea id="requisitosObrigatorios" name="requisitosObrigatorios" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="requisitosDesejaveis">Requisitos Desejáveis:</label>
+                    <textarea id="requisitosDesejaveis" name="requisitosDesejaveis"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="remuneracao">Remuneração Mensal (R$):</label>
+                    <input type="number" id="remuneracao" name="remuneracao" min="0" step="0.01" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="beneficios">Benefícios:</label>
+                    <textarea id="beneficios" name="beneficios"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="localTrabalho">Local de Trabalho:</label>
+                    <input type="text" id="localTrabalho" name="localTrabalho" required>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                    <a href="index.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="editar.js"></script>
+</body>
+</html>
